@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Drop off an item to a community fridge</title>
+  <!-- Latest compiled and minified CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <link crossorigin="anonymous" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" rel="stylesheet"/>
+  <!-- Google Fonts imports -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&family=Sen:wght@400;700&display=swap"
+        rel="stylesheet">
+  <!--  CSS Import -->
+  <link href="css/comm-fridge.css" rel="stylesheet"/>
+</head>
+
+<body id="add_items">
+<a href="index.html" id="return_to_main">
+  <img
+      alt="Left Arrow Icon"
+      height="50"
+      id="back_icon"
+      src="images/arrow_circle_left_white_36dp.svg"
+      width="50"
+  />
+</a>
+<div class="invisible" id="respArea">&nbsp;</div>
+<h1 class="drop_off" id="section_header">Drop off an item in a community fridge</h1>
+<div id="controls">
+  <form>
+    <label for="grocery_items" id="lbl_select">Choose an item</label>
+    <select id="grocery_items" size="4">
+    </select><br><br>
+    <div id="add_item_option">
+      <img
+          alt="Add Icon"
+          height="20"
+          id="add_icon"
+          src="images/add_circle_black_24dp.svg"
+          width="20"
+      />
+      Add an item
+    </div>
+    <label for="number_items">Number of items</label>
+    <input id="number_items" type="text"/><br><br>
+    <div class="button_container">
+      <button class="submit_btn" disabled="true" id="find_btn">Find fridges</button>
+    </div>
+  </form>
+</div>
+<div class="invisible" id="view_results">
+  <h2>Available fridges</h2>
+</div>
+<div class="invisible" id="popup">
+  <form id="add_item_form">
+    <div class="icon_container">
+      <img
+          alt="Close Icon"
+          height="50"
+          id="close_icon"
+          src="images/close_black_24dp.svg"
+          width="40"
+      />
+    </div>
+    <h2 id="add_form_header">Adding new item</h2>
+    <label class="lbl_item" for="item_name">Item name</label>
+    <input id="item_name" type="text"/><br>
+    <label class="lbl_item" for="item_type">Item type</label>
+    <input id="item_type" type="text"/><br>
+    <label for="item_icon_upload" id="file_upload">
+      <img
+          alt="Upload Icon"
+          height="25"
+          id="upload_icon"
+          src="images/cloud_upload_white_18dp.svg"
+          width="25"
+      />
+      Upload item icon
+    </label>
+    <input id="item_icon_upload" name="filename" type="file">
+    <button class="submit_btn" disabled="true" id="add_btn">Add item</button>
+  </form>
+</div>
+<script src="js/comm-fridge.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,771 @@
+/* Applies to all HTML-pages */
+body {
+    background-color: #3aafa9;
+}
+
+/* Main Page Style */
+#main_page_header {
+    padding-top: 15%;
+    text-align: center;
+    color: #feffff;
+    text-shadow: 2px 2px 5px #17252a;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: normal;
+    font-family: "Outfit", Verdana, sans-serif;
+}
+
+.link_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_menu_link:link,
+.main_menu_link:visited {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 250px;
+    margin: 15px 40px;
+    text-decoration: none;
+    background-color: #feffff;
+    border: 2px solid #feffff;
+    border-radius: 25px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+}
+
+.disabled:link,
+.disabled:visited {
+    cursor: not-allowed;
+}
+
+.main_menu_link:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.25);
+}
+
+.main_menu_link p {
+    display: inline-block;
+    text-align: center;
+    font-size: 18px;
+    color: #2b7878;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+    font-family: 'Sen', Helvetica, sans-serif;
+}
+
+/* Fridge Selection and Viewing Items Page */
+#return_to_main {
+    position: absolute;
+    top: 7.5%;
+    right: 2%;
+}
+
+#add_fridge {
+    position: absolute;
+    top: 13%;
+    right: 2%;
+}
+
+#section_header {
+    margin-top: 7.5%;
+    margin-bottom: 2%;
+    text-align: center;
+    color: #feffff;
+    text-shadow: 2px 2px 5px #17252a;
+    /* font-size: 32px; */
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: normal;
+    font-family: "Outfit", Verdana, sans-serif;
+}
+
+#fridge_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 30px;
+}
+
+.fridge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    max-height: 500px;
+    margin: 20px;
+    background-color: #def2f1;
+    border-radius: 10px;
+    box-shadow: 0px 10px 14px 0px rgb(0 0 0 / 15%);
+    cursor: pointer;
+    -webkit-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+}
+
+p.fridge_name,
+p.address,
+p.telephone {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: normal;
+    font-family: "Outfit", Verdana, sans-serif;
+    margin-top: 3px;
+    margin-bottom: 8px;
+}
+
+p.telephone {
+    margin-bottom: 17px;
+}
+
+.fridge:hover {
+    background-color: #17252a;
+    box-shadow: none;
+    color: #def2f1;
+}
+
+/* Styling "Edit fridge" button */
+.edit_fridge_btn {
+    padding: 0;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    margin-bottom: 0.8em;
+
+    /*box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),*/
+    /*0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);*/
+    border-radius: 15px;
+    font-weight: 500;
+    text-align: center;
+    background-color: #3aafa9;
+    color: #feffff;
+    width: 7em;
+    height: 2.5em;
+    font-family: "Outfit", Verdana, sans-serif;
+    font-size: large;
+}
+
+.edit_fridge_btn:hover {
+    background-color: #feffff;
+    color: #17252a;
+}
+
+#back_icon, #add_icon2 {
+    filter: drop-shadow(0px 5px 3px rgba(0, 0, 0, 0.25));
+    cursor: pointer;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+#back_icon:hover, #add_icon2:hover {
+    filter: none;
+}
+
+/* Styling the viewing items page */
+#viewing_items {
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+#fridge_summary,
+#items_list {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    min-height: 29em;
+    overflow: hidden;
+}
+
+#cart {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15% 70% 15%;
+    border-radius: 20px;
+    min-height: 29em;
+    overflow: hidden;
+}
+
+/* Styling fridge summary on the left side */
+#fridge_summary {
+    position: fixed;
+    left: 1%;
+    min-width: 25%;
+    background-color: #feffff;
+    margin-left: 1%;
+}
+
+#fridge_summary p {
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: normal;
+    font-family: "Outfit", Verdana, sans-serif;
+    font-size: large;
+}
+
+.category {
+    padding: 3% 4% 3% 8%;
+    margin: 0;
+}
+
+.category:hover {
+    background-color: #17252a;
+    color: #feffff;
+}
+
+#fridge_name1 {
+    margin-bottom: 2%;
+    font-size: 26px;
+    color: #2b7878;
+    font-weight: 400;
+    letter-spacing: 0.15px;
+    font-family: "Sen", Helvetica, sans-serif;
+    margin-left: 8%;
+}
+
+.fridge_info {
+    margin-left: 8%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+#scale {
+    margin-left: 8%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: #17252a;
+    width: 80%;
+    border: 2px solid #17252a;
+    border-radius: 14px;
+}
+
+#inner_bar {
+    margin-left: 0%;
+    background-color: #def2f1;
+    display: block;
+    text-align: center;
+    padding: 3% 3%;
+    border-radius: 12px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: large;
+    letter-spacing: normal;
+    font-family: "Outfit", Verdana, sans-serif;
+    color: #2b7878;
+}
+
+/* Styling items list */
+#items_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    min-width: 45%;
+    left: 0%;
+    background-color: #feffff;
+    margin: 0 8px;
+    overflow: hidden;
+}
+
+.item {
+    display: flex;
+    width: 92%;
+    margin-top: 1.5%;
+    border-bottom: 2px solid #def2f1;
+    padding-bottom: 2%;
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 15%;
+    margin: 0 5%;
+}
+
+.middle div {
+    font-style: normal;
+    font-weight: 800;
+    font-size: large;
+    letter-spacing: normal;
+    font-family: "Outfit", Verdana, sans-serif;
+    color: #2b7878;
+    margin: 0;
+    height: 33%;
+    vertical-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right {
+    width: 20%;
+}
+
+.space_filler,
+.add_rem {
+    height: 33%;
+}
+
+.add_rem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.number {
+    height: 80%;
+    width: 40%;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: 800;
+    font-size: larger;
+    letter-spacing: normal;
+    font-family: "Outfit", Verdana, sans-serif;
+    background-color: #17252a;
+    color: #feffff;
+    border-radius: 20px;
+    margin: 20% 5%;
+}
+
+.add,
+.remove {
+    border-radius: 20px;
+    width: 30%;
+    height: 85%;
+    border: 1px solid #def2f1;
+    background-color: #def2f1;
+    font-style: normal;
+    font-weight: 800;
+    font-size: larger;
+    letter-spacing: normal;
+    font-family: "Outfit", Verdana, sans-serif;
+}
+
+/* Styling cart */
+#cart {
+    position: fixed;
+    right: 1%;
+    width: 25%;
+    background-color: #feffff;
+    margin-right: 1%;
+}
+
+.header_container, .btn_container {
+    background-color: #17252a;
+    width: 100%;
+}
+
+#cart_header {
+    font-size: 20px;
+    color: #feffff;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.15px;
+    font-family: "Sen", Helvetica, sans-serif;
+    text-align: center;
+    margin: 5% auto;
+    height: 20%;
+}
+
+#cart_items {
+    list-style-type: none;
+    margin: 2% 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#cart_items li {
+    padding-bottom: 1%;
+    text-align: center;
+    font-style: normal;
+    font-weight: 1000;
+    font-size: large;
+    letter-spacing: normal;
+    font-family: "Outfit", Verdana, sans-serif;
+    color: #2b7878;
+}
+
+#controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 30px;
+}
+
+/* Add an item */
+#view_results {
+    background-color: #8d8fa6;
+    color: #fff;
+    border-radius: 1em;
+    width: 20%;
+    margin-top: -20%;
+    margin-right: 15%;
+    float: right;
+    /*min-height: 76vh;*/
+    text-align: center;
+    overflow-y: scroll;
+    font-weight: 500;
+    font-size: large;
+    letter-spacing: normal;
+    font-family: "Outfit", Verdana, sans-serif;
+}
+
+
+#section_header.drop_off {
+    margin-top: 1%;
+}
+
+form {
+    /*background-color: #e45170;*/
+    background-color: #2b7878;
+    border-radius: 1em;
+    padding: 1.8em;
+    width: 27%;
+    margin-top: -0.5em;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 1em;
+}
+
+form label {
+    color: #fff;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+    font-family: 'Sen', Helvetica, sans-serif;
+    padding-right: 2%;
+}
+
+form label:first-child {
+    padding-right: 4%;
+}
+
+.submit_btn {
+    padding: 0;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    font-weight: 500;
+    text-align: center;
+    background-color: lightgrey;
+    color: #003b4b;
+    width: 10em;
+    height: 2.9em;
+    font-family: "Outfit", Verdana, sans-serif;
+    font-size: large;
+}
+
+.button_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#submit_btn:hover {
+    background-color: #fff;
+}
+
+#submit_btn:disabled, #submit_btn[disabled] {
+    background-color: lightgrey;
+    color: gray;
+}
+
+#lbl_select {
+    vertical-align: top;
+}
+
+select#grocery_items {
+    width: 18em;
+    height: 10em;
+    color: #027d79;
+    padding: 0.4em;
+}
+
+input {
+    color: #027d79;
+}
+
+/* Add an item -- results */
+#view_results h2 {
+    font-size: 1.4em;
+}
+
+#view_results div {
+    display: inline-block;
+    background: #fff;
+    width: 100%;
+    text-align: center;
+    padding-right: 0em;
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+    margin-bottom: 0.5em;
+    color: #1c8682;
+    transition: opacity 1s ease-out;
+}
+
+#view_results p {
+    margin: 0;
+}
+
+/* make important information bold*/
+#view_results strong {
+    font-weight: 700;
+}
+
+/* make fridge capacity information bold */
+#view_results p.fridge_capacity {
+    font-size: larger;
+    color: #e45170;
+}
+
+#view_results div:last-child {
+    margin-bottom: 2em;
+}
+
+#view_results div.best {
+    background-color: greenyellow;
+    color: #1c8682;
+    transition: opacity 1s ease-out;
+}
+
+#view_results div:hover {
+    display: inline-block;
+    background: #f9bfba;
+    cursor: pointer;
+
+}
+
+#view_results div span:first-child {
+    margin-top: 0.4em;
+}
+
+#view_results div span:nth-last-child(2) {
+    margin-top: 0.5em;
+    color: #e45170;
+    font-size: 1.1em;
+    margin-left: 8em;
+    padding-bottom: 0.5em
+}
+
+#view_results div span {
+    display: block;
+    font-size: 1em;
+}
+
+#view_results img {
+    width: 5.9em;
+    float: left;
+    margin-left: -0.5em;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+#respArea {
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: bisque;
+    width: 43%;
+    border-radius: 0.5em;
+    text-align: center;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.25px;
+    font-family: 'Sen', Helvetica, sans-serif;
+    padding: 1em;
+    min-height: 80px;
+}
+
+/* Style success and error messages */
+.success_msg {
+    color: #027d79;
+}
+
+.error_msg {
+    color: #D25454;
+}
+
+#popup {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.35);
+    position: absolute;
+    top: 0;
+}
+
+/* Styling popup form that allow user to add new item */
+#popup form {
+    width: 40em;
+    height: 30em;
+    background-color: white;
+    margin: 18em auto auto;
+    border-radius: 1em;
+    padding-top: 0;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+#add_form_header {
+    color: #1c8682;
+    font-family: "Outfit", Verdana, sans-serif;
+    font-size: 3em;
+    position: relative;
+    margin-bottom: 4%;
+    margin-top: 0;
+}
+
+#add_btn {
+    background-color: #17252a;
+    color: #fff;
+    margin: 0;
+}
+
+#add_item_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.lbl_item, #item_icon {
+    color: #1c8682;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Sen', Helvetica, sans-serif;
+    padding-right: 2%;
+}
+
+#add_item_option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Sen', Helvetica, sans-serif;
+    margin-top: -0.5em;
+    margin-bottom: 0.5em;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#add_icon {
+    filter: invert(100%) sepia(0%) saturate(7481%) hue-rotate(358deg) brightness(115%) contrast(104%);
+    margin-right: 0.2em;
+}
+
+
+input[type=file] {
+    display: none;
+}
+
+#file_upload {
+    color: #fff;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Sen', Helvetica, sans-serif;
+    background-color: #17252a;
+    border-radius: 1em;
+    padding: 0.3em 0.7em 0.2em;
+    margin-top: 1.5%;
+    margin-bottom: 5%;
+}
+
+.icon_container {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    position: relative;
+}
+
+#close_icon, #check_icon {
+    filter: invert(31%) sepia(91%) saturate(704%) hue-rotate(137deg) brightness(98%) contrast(98%);
+}
+
+#cross_icon {
+    filter: invert(41%) sepia(16%) saturate(2137%) hue-rotate(314deg) brightness(104%) contrast(87%);
+}
+
+#check_icon {
+    position: relative;
+    left: -7%;
+}
+
+/* Styling form for adding a new fridge */
+#add_fridge_form, #edit_fridge_form {
+    width: 40em;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    padding-bottom: 0.5em;
+}
+
+
+select#accepted_types {
+    width: 17em;
+    height: 10em;
+    color: #027d79;
+    padding: 0.4em;
+    margin-bottom: 1em;
+}
+
+#add_fridge_btn, #edit_fridge_btn {
+    position: relative;
+    left: 60%;
+    margin: 0.8em 0;
+}
+
+/* Background color for highlighting improper input in the text fields */
+.error {
+    background-color: #D25454;
+}
+
+input, option {
+    font-size: 1.2em;
+}
+
+input {
+    width: 14em;
+}
+
+/* Styling pick up items button */
+.btn_container {
+    padding: 0.5em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#pick_up_btn {
+    background-color: #feffff;
+    color: #17252a;
+    width: 8em;
+    height: 2.5em;
+}

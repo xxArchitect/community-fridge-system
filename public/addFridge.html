@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Add new community fridge</title>
+  <!-- Latest compiled and minified CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <link crossorigin="anonymous" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" rel="stylesheet"/>
+  <!-- Google Fonts imports -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&family=Sen:wght@400;700&display=swap"
+        rel="stylesheet">
+  <!--  CSS Import -->
+  <link href="/css/comm-fridge.css" rel="stylesheet"/>
+</head>
+
+<body>
+<a href="/" id="return_to_main">
+  <img
+      alt="Left Arrow Icon"
+      height="50"
+      id="back_icon"
+      src="/images/arrow_circle_left_white_36dp.svg"
+      width="50"
+  />
+</a>
+<div class="invisible" id="respArea"></div>
+<h1 class="drop_off" id="section_header">Add a new community fridge</h1>
+<div id="controls">
+  <form id="add_fridge_form">
+    <div>
+      <label for="fridge_name">Fridge name</label>
+    </div>
+    <div>
+      <input id="fridge_name" type="text"/><br><br>
+    </div>
+    <div>
+      <label for="num_items_accepted">Number of items accepted</label>
+    </div>
+    <div>
+      <input id="num_items_accepted" type="text"/><br><br>
+    </div>
+    <div>
+      <label for="accepted_types">Accepted types</label>
+    </div>
+    <div>
+      <select id="accepted_types" multiple>
+        <option value="dairy">Dairy</option>
+        <option value="produce">Produce</option>
+        <option value="pantry">Pantry</option>
+      </select>
+    </div>
+    <div>
+      <label for="contact_person">Contact person</label>
+    </div>
+    <div>
+      <input id="contact_person" type="text"/><br><br>
+    </div>
+    <div>
+      <label for="contact_phone">Contact phone</label>
+    </div>
+    <div>
+      <input id="contact_phone" type="text"/><br><br>
+    </div>
+    <div>
+      <label for="street_name">Street name</label>
+    </div>
+    <div>
+      <input id="street_name" type="text"/><br><br>
+    </div>
+    <div>
+      <label for="postal_code">Postal code</label>
+    </div>
+    <div>
+      <input id="postal_code" type="text"/><br><br>
+    </div>
+    <div>
+      <label for="city">City</label>
+    </div>
+    <div>
+      <input id="city" type="text"/><br><br>
+    </div>
+    <div>
+      <label for="province">Province</label>
+    </div>
+    <div>
+      <input id="province" type="text"/><br><br>
+    </div>
+    <button class="submit_btn" id="add_fridge_btn">Add fridge</button>
+  </form>
+</div>
+<!--JS file specifically for addFridge.html-->
+<script src="/js/add_fridge.js" type="module" type="text/javascript"></script>
+</body>
+</html>

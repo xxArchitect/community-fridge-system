@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<hmtl lang="en">
+  <head>
+    <!-- Google Fonts imports -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&family=Sen:wght@400;700&display=swap"
+          rel="stylesheet">
+    <!--  CSS Import  -->
+    <link href="css/comm-fridge.css" rel="stylesheet"/>
+    <title>Choose a Fridge</title>
+  </head>
+  <body id="fridge_viewing_selection">
+  <!-- Return button -->
+  <a href="/" id="return_to_main">
+    <img
+        alt="Left Arrow Icon"
+        height="50"
+        id="back_icon"
+        src="images/arrow_circle_left_white_36dp.svg"
+        width="50"
+    />
+  </a>
+  <a href="/fridges/addFridge" id="add_fridge">
+    <img
+        alt="Add Icon"
+        height="50"
+        id="add_icon2"
+        src="images/add_circle_white_36dp.svg"
+        width="50"
+    />
+  </a>
+  <h1 id="section_header">Available Fridges</h1>
+  <!-- Div for selecting the fridge -->
+  <div id="fridge_selection">
+    <div id="fridge_container"></div>
+  </div>
+  <!-- Div for viewing items in the fridge -->
+  <div id="viewing_items">
+    <div id="fridge_summary"></div>
+    <div id="items_list"></div>
+    <div id="cart">
+      <div class="header_container">
+        <h3 id="cart_header">You have picked up the following items</h3>
+      </div>
+      <ul id="cart_items"></ul>
+      <div class="btn_container">
+        <button class="submit_btn invisible" id="pick_up_btn">Pick up items</button>
+      </div>
+    </div>
+  </div>
+  </body>
+  <script src="js/comm-fridge.js" type="text/javascript"></script>
+</hmtl>
