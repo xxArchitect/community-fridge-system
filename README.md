@@ -22,7 +22,7 @@ can be used for both picking up and dropping off items.
 
 --- 
 
-## Viewing available fridges
+### Viewing available fridges
 
 ![Fridge selection](https://i.imgur.com/skebIqb.png)
 
