@@ -324,9 +324,9 @@ function categoryBreakdown(fridge) {
   ];
 
   // calculate number of items in each category
-  for (let item of Object.values(fridge.items)) {
+  for (let fridgeItem of Object.values(fridge.items)) {
     // obtain item info from the items list
-    let itemInfo = itemsList[parseInt(item.id)];
+    let itemInfo = itemsList.find(item => item.id == fridgeItem.id);
     if (itemInfo.type === "produce") categories[0].number++;
     else if (itemInfo.type === "dairy") categories[1].number++;
     else if (itemInfo.type === "bakery") categories[2].number++;
@@ -361,16 +361,16 @@ function updateFridgeSummary(fridge, categories) {
 function listItems(fridge) {
   let htmlContent = "";
 
-  for (let item of Object.values(fridge.items)) {
+  for (let fridgeItem of Object.values(fridge.items)) {
     // obtain item info from the items list
-    let itemInfo = itemsList[parseInt(item.id)];
+    let itemInfo = itemsList.find(item => item.id == fridgeItem.id);
     // list only selected category of items
     htmlContent += `
-      <div class="item ${itemInfo.type}" title="${item.id}">
+      <div class="item ${itemInfo.type}" title="${fridgeItem.id}">
           <img src="${itemInfo.img}" width="125" height="125" />
           <div class="middle">
             <div class="item_name">${itemInfo.name}</div>
-            <div class="quantity">Quantity: ${item.quantity}</div>
+            <div class="quantity">Quantity: ${fridgeItem.quantity}</div>
             <div class="pickup">Pickup item:</div>
           </div>
           <div class="right">
@@ -469,12 +469,12 @@ function updateCart() {
 
   let htmlContent = "";
 
-  for (let item of cartList) {
+  for (let cartItem of cartList) {
     // obtain item info from the items list
-    let itemInfo = itemsList[parseInt(item.id)];
+    let itemInfo = itemsList.find(item => item.id == cartItem.id);
     // add item to the cart
-    if (item.quantity > 0) {
-      htmlContent += `<li>${item.quantity} x ${itemInfo.name}</li>`;
+    if (cartItem.quantity > 0) {
+      htmlContent += `<li>${cartItem.quantity} x ${itemInfo.name}</li>`;
     }
   }
 
