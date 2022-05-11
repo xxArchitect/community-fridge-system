@@ -33,4 +33,4 @@ you to follow:
   ``` 
   node server.js
   ```
-5. Access the website at 
+5. Access the website at **http://localhost:8000**.
