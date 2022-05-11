@@ -6,15 +6,43 @@ can be used for both picking up and dropping off items.
 
 # Features
 
-- View the list of available fridges
 - View and pickup items in the selected fridge
 - Edit information about the fridge 
 - Add a new fridge
 - Drop off a specific item into the one of the fridge
   + System gives specific suggestions based on which fridge has the lowest amount of selected item
 - Create new items by specifying name, type and uploading a picture
-- **Important:** Search function is currently **not** implemented.  
+- **Important:** Search function is currently **not** implemented.
 
+# Demos
+
+### Main page
+
+![Main screen](https://i.imgur.com/FbsDVZQ.png)
+
+--- 
+
+## Viewing available fridges
+
+![Fridge selection](https://i.imgur.com/skebIqb.png)
+
+---
+
+### View and pick up items from a fridge
+
+![View and pick up items](https://i.imgur.com/ldHdOPM.png)
+
+---
+
+### Edit existing fridge
+
+![Edit fridge](https://i.imgur.com/2Ta7lBL.png)
+
+---
+
+### Drop off an item to the fridge
+
+![Dropp off an item to the fridge](https://i.imgur.com/VC1f2pH.png)
 
 # Setup 
 
