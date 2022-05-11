@@ -46,10 +46,10 @@ can be used for both picking up and dropping off items.
 
 # Setup 
 
-This application was built using **JavaScript ES6**, **HTML5**, **CSS**, and **Express.js**. Hence, to use, you need to
+This application was built using **JavaScript ES6**, **HTML5**, **CSS**, and **Express.js**. Hence, to use it, you need to
 install **Node.js** and then use **npm** to install **Express.js**. Here are detailed instructions for 
 you to follow: 
-1. Install **Node.js** by downloading the installer from [**here**](https://github.com/markdown-it/markdown-it-emoji).
+1. Install **Node.js** using the installer that can be downloaded from [**here**](https://github.com/markdown-it/markdown-it-emoji).
 2. Clone this repository into a local folder on your machine use the following instruction in the terminal:
   ``` 
   git clone https://github.com/xxArchitect/community-fridge-system.git
