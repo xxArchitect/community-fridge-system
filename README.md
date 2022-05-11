@@ -13,6 +13,7 @@ can be used for both picking up and dropping off items.
 - Drop off a specific item into the one of the fridge
   + System gives specific suggestions based on which fridge has the lowest amount of selected item
 - Create new items by specifying name, type and uploading a picture
+- **Important:** Search function is currently **not** implemented.  
 
 
 # Setup 
